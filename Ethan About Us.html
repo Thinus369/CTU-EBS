@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9fafc;
+  color: rgb(15, 15, 15);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Reset some default styles for consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto as the default font */
+}
+  
+  /* Apply a background color and set default font styles */
+  body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Main content container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* Headings styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+  /* Paragraph styles */
+  p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Section styles */
+  section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* List styles */
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form styles */
+  form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Link styles */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Image styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Horizontal rule styles */
+  hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  .feature-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  /* Styles for the Key Features section */
+  .features {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Styles for the Join Us aside */
+  .join-us {
+    flex: 0 0 300px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+  }
+
+  /* Reset and global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+dl dt,
+dl dd {
+    padding: 3px; /* Adjust as needed */
+}
+
+/* Style for dt elements */
+dl dt {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+/* Style for dd elements */
+dl dd {
+    padding-left: 20px; /* Adjust as needed */
+    margin-left: 20px; /* Add indent */
+}
+
+/* Add padding to the Key Features section */
+.features {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.join-us {
+    flex: 0 0 300px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Style for knowledge image within Join Us aside */
+.join-us img {
+    display: block;
+    margin-top: 20px; /* Add margin to separate image from text */
+    max-width: 100%; /* Make sure the image doesn't exceed the container */
+}
+
+/* Create a container for Key Features and Join Us sections */
+.features-join-us-container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Add padding to the Key Features section */
+.features {
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+/* Style for the Upload Form section */
+.upload-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Form field styles */
+.upload-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.upload-form .upload-label {
+    font-weight: bold;
+}
+
+.upload-form .upload-para {
+    font-weight: bold;
+    font-size: 1.06rem;
+    color: #333;
+}
+
+.upload-form input[type="text"],
+.upload-form select,
+.upload-form input[type="file"],
+.upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff; /* White background */
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto as the font */
+    color: #555; /* Text color */
+}
+
+.upload-form input[type="text"]:focus,
+.upload-form select:focus,
+.upload-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.upload-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('down-arrow.png') no-repeat right;
+    background-size: 20px;
+    background-color: #fff;
+    padding-right: 30px;
+    color: #555; /* Text color */
+}
+
+.upload-form input[type="file"] {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.upload-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Form field styles */
+.upload-form input[type="file"] {
+    display: none; /* Hide the original file input */
+}
+
+/* Styles for custom file input */
+.file-label {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-drag-indicator {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    color: #aaa;
+}
+
+.file-choose-button {
+    display: block; /* Change to block display */
+    margin: 10px auto 0; /* Center the button horizontally and add margin */
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: fit-content; /* Make the button width fit its content */
+}
+
+.file-choose-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Highlight the drag-and-drop area when hovering */
+.file-label:hover {
+    background-color: #f2f2f2;
+    border-color: #007bff;
+}
+
+/* Hide the drag-and-drop indicator when hovering over the "Choose File" button */
+.file-label:hover .file-drag-indicator {
+    display: none;
+}
+
+/* Style for the "Submit" button */
+.upload-submit {
+    display: block; /* Change to block display */
+    margin: 20px auto 0; /* Center the button horizontally and add margin */
+    padding: 10px 20px; /* Increase padding for larger size */
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.upload-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: right;
+}
+
+.navbar-links li {
+    margin-right: 10px; /* Adjust margin between links */
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+.navbar-logo img {
+    width: 250px; /* Set a specific width for the logo */
+    height: auto; /* Preserve the original aspect ratio */
+    margin-right: 10px; /* Add some spacing between the logo and links */
+}
+
+.page-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-info {
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+            <a href="#"><img class="navbar-logo"src="https://ctutraining.ac.za/wp-content/uploads/2021/07/CTU-PTE_MAIN-LOGO.png" alt="Logo"></a>
+            <ul class="navbar-menu">
+              <li><a href="Thinus Home.html">Home</a></li>
+              <li><a href="Sbuda Timetable.html">Timetable</a></li>
+              <li><a href="Zander Discusions.html">Discussion</a></li>
+              <li><a href="Andre Sharing Page.html">Share Resources</a></li>
+              <li><a href="Ethan About Us.html">About Us</a></li>
+              <li><a href="Lukie Contact us.html">Contact Us</a></li>
+              <li><a href="Old Contact Page From FA1.html">Older Contact Us</a></li>
+            </ul>
+    </nav>
+</header>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <h4 class="u-text u-text-default u-text-2">Team 7 Studios</h4>
+                      <p class="u-text u-text-3">At Team 7 Studios, we understand and would like to play a part in the role that Websites play in bring more peole viewing what your company or future company has to offer.&nbsp;<br>
+                        <br>We ensure that the basic needs is met from ensuring the Websites we design is up and running and that the data is protected as well.
+                      </p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-5">
+          <span style="font-weight: 700;">Team Leader:  Thinus Smal </span>
+          <br>
+            <p><b>Responsibilities:</b> Organise the team to perform optimally and deliver on their task/ Perform required task decided by the team as per our project plan</p>
+          </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-default u-text-6">
+          <span style="font-weight: 700;">Coordinator: André Gonçalves </span>
+        <br>
+          <p><b>Responsibilities:</b> Assist team leader with organising and planning all necessary activities pertaini ng to the group/Perform required tasks decided by the team as per our project plan. </p>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-default u-text-6">
+          <span style="font-weight: 700;">2nd Coordinator: Ethan Smith </span>
+        <br>
+          <p><b>Responsibilities:</b> Assist team leader and fellow coordinator with organising and planning all necessary activities pertaining to the group/Perform required tasks decided by the team as per our project plan. </p>
+      <p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-default u-text-6">
+          <span style="font-weight: 700;">Project Manager:  Zander Kruger</span>
+          <br>
+            <p><b>Responsibilities:</b> Organise the team to deliver the objectives within the expected timeline and manage the teams time regarding any project/ Perform required tasks decided by the team as per our project plan.</p>
+        <p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-default u-text-6">
+          <span style="font-weight: 700;">Team player: Lukie Magale </span>
+        <br>
+          <p><b>Responsibilities:</b>  Perform all tasks as expected and assist any team member and be a proxy for anyone in absence or when more hands are needed. / Perform required tasks decided by the team as per our project plan.</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-default u-text-6">
+          <span style="font-weight: 700;">Team Player:  Sibusiso Shongwe</span>
+        <br>
+          <p><b>Responsibilities:</b>  Perform all tasks as expected and assist any team member and be a proxy for anyone in absence or when more hands are needed. / Perform required tasks decided by the team as per our project plan. </p>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="text-align:center">What We Do</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <p class="u-text u-text-5">
+            <span style="font-weight: 700;">Cloud</span>
+            <br>Improve your business with a technology partner that understands how technology is constantly evolving, and how to leverage the advantages for your business.<br>
+          </p>
+          <p><button class="button">More Information</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <p class="u-text u-text-default u-text-6">
+            <span style="font-weight: 700;">Connectivity</span>
+            <br>Connectivity is the foundation of modern business, you need a partner that understands the differences between connectivity solutions and how they can benefit your business.<br>
+          </p>
+          <p><button class="button">More Information</button></p>
+        </div>
+      </div>
+    </div>   
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <p class="u-text u-text-default u-text-6">
+            <span style="font-weight: 700;">How defvoted and driven are We</span>
+            <br>
+            <p>We are willing to push the limits to meet your needs and we have a qualified and expericed team that will be working around the clocl to ensure that you as a customer Will Always Be Taken Care Of!</p>
+          <p>
+          <p><button class="button">More Information</button></p>
+        </div>
+      </div>
+    </div>   
+    
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <p class="u-text u-text-default u-text-6">
+            <span style="font-weight: 700;">Let us help you grow your Business!</span>
+          <br>
+            <p><b>Team 7 Studios</b> offers a comprehensive range of products and services specifically designed with the Small to Medium Enterprise in mind. Our solutions guarantee increased productivity and scalability to enable the required growth of your business. Contact Us today and let us help you grow your business!  Don't have a team of skilled Technicians at your disposal? No need to worry, let the <b>Team 7 Studios</b> take care of it!</p>
+        <p>
+          <p><button class="button">More Information</button></p>
+        </div>
+      </div>
+    </div>   
+    <footer class="page-footer">
+      <div class="footer-container">
+          <div class="footer-links">
+              <ul>
+                <li><a href="Thinus Home.html">Home</a></li>
+                <li><a href="Sbuda Timetable.html">Timetable</a></li>
+                <li><a href="Zander Discusions.html">Discussion</a></li>
+                <li><a href="Andre Sharing Page.html">Share Resources</a></li>
+                <li><a href="Ethan About Us.html">About Us</a></li>
+                <li><a href="Lukie Contact us.html">Contact Us</a></li>
+                <li><a href="Old Contact Page From FA1.html">Older Contact Us</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-info">
+          <p>&copy; 2023 Team7. All rights reserved.</p>
+          <p>1234 Example Street, City, Country</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Contact us at <a href="mailto:info@yourcompany.com">Development@team7Studios.com</a></p>
+          <p>Follow us on <a href="https://twitter.com/yourcompany">Twitter</a> | <a href="https://instagram.com/yourcompany">Instagram</a></p>
+      </div>
+  </footer>
+
+
+</body>
+</html>
+
+
+
+
